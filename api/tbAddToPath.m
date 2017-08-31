@@ -18,7 +18,7 @@ function oldPath = tbAddToPath(rootFolder, varargin)
 
 parser = inputParser();
 parser.addRequired('rootFolder', @ischar);
-parser.addParameter('pathPlacement', 'append', @ischar);
+parser.addParamValue('pathPlacement', 'append', @ischar);
 parser.parse(rootFolder, varargin{:});
 rootFolder = tbHomePathToAbsolute(parser.Results.rootFolder);
 pathPlacement = parser.Results.pathPlacement;

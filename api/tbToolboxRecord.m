@@ -43,19 +43,19 @@ function record = tbToolboxRecord(varargin)
 
 parser = inputParser();
 parser.KeepUnmatched = true;
-parser.addParameter('name', '', @ischar);
-parser.addParameter('url', '', @ischar);
-parser.addParameter('type', '', @ischar);
-parser.addParameter('flavor', '', @ischar);
-parser.addParameter('subfolder', '', @(val) ischar(val) || iscellstr(val) || isstring(val));
-parser.addParameter('update', '', @ischar);
-parser.addParameter('hook', '', @ischar);
-parser.addParameter('requirementHook', '', @ischar);
-parser.addParameter('localHookTemplate', '', @ischar);
-parser.addParameter('toolboxRoot', '', @ischar);
-parser.addParameter('pathPlacement', 'append', @ischar);
-parser.addParameter('importance', '', @ischar);
-parser.addParameter('extra', '');
+parser.addParamValue('name', '', @ischar);
+parser.addParamValue('url', '', @ischar);
+parser.addParamValue('type', '', @ischar);
+parser.addParamValue('flavor', '', @ischar);
+parser.addParamValue('subfolder', '', @(val) ischar(val) || iscellstr(val) || isstring(val));
+parser.addParamValue('update', '', @ischar);
+parser.addParamValue('hook', '', @ischar);
+parser.addParamValue('requirementHook', '', @ischar);
+parser.addParamValue('localHookTemplate', '', @ischar);
+parser.addParamValue('toolboxRoot', '', @ischar);
+parser.addParamValue('pathPlacement', 'append', @ischar);
+parser.addParamValue('importance', '', @ischar);
+parser.addParamValue('extra', '');
 parser.parse(varargin{:});
 
 % let the parser do all the work

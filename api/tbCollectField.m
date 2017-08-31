@@ -14,7 +14,7 @@ function values = tbCollectField(s, fieldName, varargin)
 parser = inputParser();
 parser.addRequired('s', @(s) isempty(s) || isstruct(s));
 parser.addRequired('fieldName', @ischar);
-parser.addParameter('template', {});
+parser.addParamValue('template', {});
 parser.parse(s, fieldName, varargin{:});
 s = parser.Results.s;
 fieldName = parser.Results.fieldName;

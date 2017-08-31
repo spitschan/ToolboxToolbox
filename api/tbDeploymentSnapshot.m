@@ -25,7 +25,6 @@ prefs = tbParsePrefs(varargin{:});
 
 parser = inputParser();
 parser.KeepUnmatched = true;
-parser.PartialMatching = false;
 parser.addRequired('config', @isstruct);
 parser.parse(config);
 config = parser.Results.config;

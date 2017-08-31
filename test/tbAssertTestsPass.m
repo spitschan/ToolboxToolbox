@@ -22,8 +22,8 @@ import matlab.unittest.plugins.ToFile;
 import matlab.unittest.Verbosity;
 
 parser = inputParser();
-parser.addParameter('testFolder', pwd(), @ischar);
-parser.addParameter('resultsFile', 'testResults.tap', @ischar);
+parser.addParamValue('testFolder', pwd(), @ischar);
+parser.addParamValue('resultsFile', 'testResults.tap', @ischar);
 parser.parse(varargin{:});
 testFolder = parser.Results.testFolder;
 resultsFile = parser.Results.resultsFile;

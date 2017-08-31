@@ -22,9 +22,9 @@ function [status, result, fullCommand] = tbSystem(command, varargin)
 
 parser = inputParser();
 parser.addRequired('command', @ischar);
-parser.addParameter('keep', {}, @iscellstr);
-parser.addParameter('echo', true, @islogical);
-parser.addParameter('dir', '', @ischar);
+parser.addParamValue('keep', {}, @iscellstr);
+parser.addParamValue('echo', true, @islogical);
+parser.addParamValue('dir', '', @ischar);
 parser.parse(command, varargin{:});
 command = parser.Results.command;
 keep = parser.Results.keep;

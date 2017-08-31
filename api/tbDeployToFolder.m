@@ -25,7 +25,7 @@ function [results, prefs] = tbDeployToFolder(rootFolder, varargin)
 
 parser = inputParser();
 parser.addRequired('rootFolder', @ischar);
-parser.addParameter('config', [], @(c) isempty(c) || isstruct(c));
+parser.addParamValue('config', [], @(c) isempty(c) || isstruct(c));
 parser.parse(rootFolder, others);
 rootFolder = parser.Results.rootFolder;
 config = parser.Results.config;

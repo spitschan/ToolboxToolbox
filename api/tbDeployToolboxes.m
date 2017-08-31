@@ -30,9 +30,9 @@ function [resolved, included] = tbDeployToolboxes(varargin)
 [prefs, others] = tbParsePrefs(varargin{:});
 
 parser = inputParser();
-parser.addParameter('config', [], @(c) isempty(c) || isstruct(c));
-parser.addParameter('name', '', @ischar);
-parser.addParameter('registered', {}, @iscellstr);
+parser.addParamValue('config', [], @(c) isempty(c) || isstruct(c));
+parser.addParamValue('name', '', @ischar);
+parser.addParamValue('registered', {}, @iscellstr);
 parser.parse(others);
 name = parser.Results.name;
 registered = parser.Results.registered;

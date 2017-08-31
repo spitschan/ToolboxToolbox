@@ -19,7 +19,7 @@ function results = tbUseProject(name, varargin)
 
 parser = inputParser();
 parser.addRequired('name', @ischar);
-parser.addParameter('cdToProject', true, @islogical);
+parser.addParamValue('cdToProject', true, @islogical);
 parser.parse(name, others);
 name = parser.Results.name;
 cdToProject = parser.Results.cdToProject;

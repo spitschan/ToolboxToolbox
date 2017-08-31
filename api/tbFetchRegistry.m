@@ -21,7 +21,7 @@ function results = tbFetchRegistry(varargin)
 [prefs, others] = tbParsePrefs(varargin{:});
 
 parser = inputParser();
-parser.addParameter('doUpdate', true, @islogical);
+parser.addParamValue('doUpdate', true, @islogical);
 parser.parse(others);
 doUpdate = parser.Results.doUpdate;
 
